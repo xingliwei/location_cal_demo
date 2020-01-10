@@ -8,5 +8,7 @@
     <artifactId>location_cal_demo</artifactId>
     <version>1.0.0</version>
 
+    <dependencies>
 
+    </dependencies>
 </project>
