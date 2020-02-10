@@ -8,9 +8,6 @@ import java.math.BigDecimal;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
-import java.net.Socket;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Copyright (C), 2002-2020, 苏宁易购电子商务有限公司
@@ -25,7 +22,7 @@ public class LocationParseProcessImpl implements LocationParseProcess {
 
 
     //硬件的一个时钟对应的时间
-    private final BigDecimal i = new BigDecimal(1/(128*499.2*1e6));
+    private final BigDecimal per_clock = new BigDecimal(1/(128*499.2*1e6));
 
     //光速，单位米每秒
     private final long speed_of_light = 299792458;
@@ -39,7 +36,7 @@ public class LocationParseProcessImpl implements LocationParseProcess {
         System.out.println("====================debug message==================");
 
         //单位时钟传播的距离
-        BigDecimal distance_per_clock = i.multiply(new BigDecimal(speed_of_light));
+        BigDecimal distance_per_clock = per_clock.multiply(new BigDecimal(speed_of_light));
 
         System.out.println("distance_per_clock:"+distance_per_clock);
 

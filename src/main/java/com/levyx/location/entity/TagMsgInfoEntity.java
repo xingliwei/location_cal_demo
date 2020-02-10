@@ -62,6 +62,8 @@ public class TagMsgInfoEntity {
         this.tag_timestamp = tag_timestamp;
     }
 
+
+
     @Override
     public String toString() {
         return "TagMsgInfoEntity{" +
